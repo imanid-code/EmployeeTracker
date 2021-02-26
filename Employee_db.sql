@@ -14,9 +14,9 @@ primary key (id)
 create table role (
 
 id integer not null auto_increment,
-title varchar(20),
+title varchar(50),
 salary decimal(8,2),
-deparment_id integer not null,
+department_id integer not null,
 primary key (id)
 );
 

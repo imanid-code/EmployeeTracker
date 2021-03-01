@@ -62,7 +62,7 @@ order by employee.id;
 
 
 select distinct emp1.id, concat(emp1.first_name, '', emp1.last_name) as Employee,
-ro1.title as job_title, dep1.name as department, ro1.salary, concat(man1.first_name, '', man1.last_name) as Manager_name
+ro1.title as Job_Title, dep1.name as department, ro1.salary, concat(man1.first_name, '', man1.last_name) as Manager_name
 from employee emp1 inner join role ro1 on ro1.id = emp1.role_id inner join department dep1 on ro1.department_id = dep1.id
 left join employee man1 on emp1.manager_id = man1.id
 join employee emp2 on ro1.id = emp2.role_id order by id;
@@ -72,7 +72,7 @@ from employee_db.employee inner join employee_db.role on role.id = employee.role
 inner join employee_db.department on role.department_id = department.id
 group by department.name;
 
-select role.title as Tiel, name as Department, role.salary as Salary
+select role.title as Title, name as Department, role.salary as Salary
 from employee_db.department
 inner join employee_db.role on employee_db.department.id = employee_db.role.department_id
 

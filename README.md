@@ -4,6 +4,7 @@
 
  ![Employee Manager](assets/employeemanager.png)   
 
+[Walkthrough Video](https://drive.google.com/file/d/1h_2cWyJRQPt_oCZuu2Y09Nsyx50jF0di/view)
 ## Description
 
    

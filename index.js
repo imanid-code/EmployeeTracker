@@ -159,7 +159,7 @@ function addEmployee() {
                 first_name: response.firstname,
                 last_name: response.lastname,
                 role_id: arrayOfRole.indexOf(response.role)+1,
-                manage_id: response.manager
+                manager_id: response.manager
                 
             });
             askQuestions();
@@ -298,7 +298,8 @@ function updateRole(){
             }
         ])
         .then(function(respone){
-            connection.query("UPDATE role SET title = ? where id = ?", [respone.updateRole, employeeArray.indexOf(respone.updateEmployee)]);
+            connection.query("UPDATE role SET title = ? where id = ?", 
+            [respone.updateRole, employeeArray.indexOf(respone.updateEmployee)+1]);
             askQuestions();
         })
    })
